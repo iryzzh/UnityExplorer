@@ -330,7 +330,7 @@ namespace UnityExplorer.UI.Widgets
         {
 #if CPP
             Il2CppStructArray<float> samples = new float[clip.samples * clip.channels];
-            AudioClip.GetData(clip, samples, clip.samples, 0);
+            clip.GetData(samples, 0);
 #else
             float[] samples = new float[clip.samples * clip.channels];
             clip.GetData(samples, 0);
